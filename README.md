@@ -39,4 +39,4 @@ On clicking the individual file, you get the detailed result in a browser as dis
 - Setting the API key
 - Redirecting to Metascan API portal
 
-
+Check the other screenshots in the Screenshot folder.
