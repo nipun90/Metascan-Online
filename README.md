@@ -25,3 +25,15 @@ Home Screen: This screen provides you with the three type of functionalities to 
 
 ![alt tag](https://raw2.github.com/tanmaygarg/Metascan-Online/master/Screenshots/Main%20Screen)
 
+A file selection utility has been provided for selecting files and folders.!
+￼￼
+After you select a file or a folder, you are redirected to the results screen, where the progress of the files being scanned is displayed. !
+!
+Results tab displays the name of the files being scanned with the progress and the final status.!
+On clicking the individual file, you get the detailed result in a browser as displayed in the second screen.!
+!
+￼The Settings tab has the following options! !
+- Toggling Auto scan On/Off! !
+- Setting the API key! !
+- Redirecting to Metascan API portal!
+
