@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    android:orientation="vertical"
+    android:padding="10dp" >
+	<TextView
+	    android:id="@+id/switchtext"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="Auto-Scan"
+        android:textSize="24sp"/>
+    <Switch
+        android:id="@+id/autoscan"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+       <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/opswat" />
+
+       <EditText
+           android:id="@+id/editText1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/switchtext"
+           android:layout_alignRight="@+id/autoscan"
+           android:layout_below="@+id/switchtext"
+           android:layout_marginTop="105dp"
+           android:ems="10"
+           android:inputType="textPassword"
+           android:hint="Enter API Key" >
+
+        
+       </EditText>
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/imageView1"
+           android:layout_alignLeft="@+id/imageView1"
+           android:layout_alignRight="@+id/imageView1"
+           android:layout_marginBottom="30dp"
+           android:text="Set API Key" />
+		<Button
+           android:id="@+id/metalink"
+           android:background="@android:color/transparent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/button1"
+           android:layout_alignLeft="@+id/imageView1"
+           android:layout_alignRight="@+id/imageView1"
+           android:layout_marginBottom="30dp"
+           android:text="Click here to get your metascan api key" />
+       
+</RelativeLayout>

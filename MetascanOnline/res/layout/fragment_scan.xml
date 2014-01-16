@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddddd"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonpick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/file_icon"
+        android:gravity="left|center_vertical"
+        android:text="@string/pickfile"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/folderpick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonpick"
+        android:drawableLeft="@drawable/folder_icon"
+        android:gravity="left|center_vertical"
+        android:text="@string/pickfolder"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/fullscan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/folderpick"
+        android:drawableLeft="@drawable/android_icon"
+        android:gravity="left|center_vertical"
+        android:text="@string/fullscan"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/opswat" />
+
+</RelativeLayout>
