@@ -23,7 +23,7 @@ Home Screen: This screen provides you with the three type of functionalities to 
 - Scan a all the files in a folder
 - Scan the whole Android SD card.
 
-![alt tag](https://raw2.github.com/tanmaygarg/Metascan-Online/master/Screenshots/Main%20Screen)
+![alt tag](https://raw2.github.com/tanmaygarg/Metascan-Online/master/Screenshots/snap.jpeg)
 
 A file selection utility has been provided for selecting files and folders.
 
