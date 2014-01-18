@@ -6,7 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-
+//main class that asynchronously uploads files for scanning
 public class PostDataAsyncTask extends AsyncTask<String, String, String> {
 	private static final String TAG = "MainActivity.java";
 	private Context context;
@@ -40,6 +40,7 @@ public class PostDataAsyncTask extends AsyncTask<String, String, String> {
 	}
 	private void postFile(String textFile){
 		try{
+			//if file exsists in database directly print the results
 			if(MySQLiteDB.getInstance(context).fileStatus(textFile)!=null){
 			String[] h = MySQLiteDB.getInstance(context).fileStatus(textFile);
 			TabAdapter.result.filelist.add(textFile);
@@ -48,6 +49,7 @@ public class PostDataAsyncTask extends AsyncTask<String, String, String> {
 			TabAdapter.result.adapter.addResult(h[3]);
 			Log.v(TAG, "FinalResult: " +" "+h[0]+h[1]+" "+h[2]+" "+h[3]);
 			}
+			//else upload the file and check for results
 			else
 			{
 			//Log.v(TAG, "FileLocation: " + textFile);
@@ -81,6 +83,7 @@ public class PostDataAsyncTask extends AsyncTask<String, String, String> {
 				}							
 				Log.v(TAG, "maIn: " + parse.scan_all_result_a);
 				TabAdapter.result.adapter.addResult(parse.scan_all_result_a);
+				//calling singleton instance of database and adding the new scan results
 				MySQLiteDB.getInstance(context).addFile(textFile, dataId, parse.scan_all_result_a);
 				//MySQLiteDB.getInstance(context).getAll();
 			}

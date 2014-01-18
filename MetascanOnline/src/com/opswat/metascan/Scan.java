@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-
+//Main screen of the application containing various buttons for scanning files, folders and full system scan
 public class Scan extends Fragment{
 	
 	private static final String TAG = "MainActivity.java";

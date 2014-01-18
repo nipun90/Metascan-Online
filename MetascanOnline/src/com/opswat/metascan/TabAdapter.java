@@ -3,7 +3,7 @@ package com.opswat.metascan;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
+//manages all the fragments
 public class TabAdapter extends FragmentPagerAdapter{
 	static Results result;
 	public TabAdapter(FragmentManager f){

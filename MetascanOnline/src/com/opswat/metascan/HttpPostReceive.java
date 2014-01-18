@@ -15,18 +15,20 @@ import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
+//class for sending http post and get request
 public class HttpPostReceive {
 	String responseStr;
 	String finalResult;
 	HttpClient httpClient = new DefaultHttpClient();
 
+	//for uploading the file to metascan online server
 	public String post(String postReceiverUrl, String textFile, String apikey, String name){
-		// post header
+		
 		HttpPost httpPost = new HttpPost(postReceiverUrl);
 		File file = new File(textFile);
 		FileBody fileBody = new FileBody(file);
 
+		//attaching headers apikey, filename and file
 		MultipartEntity reqEntity = new MultipartEntity();
 		httpPost.setHeader("apikey",(apikey));
 		httpPost.setHeader("filename",name);
@@ -48,6 +50,7 @@ public class HttpPostReceive {
 		}
 		return responseStr;
 	}
+	//getting the scan result from the server
 	public String get(String getUrl, String apikey){
 		URI website;
 		try {

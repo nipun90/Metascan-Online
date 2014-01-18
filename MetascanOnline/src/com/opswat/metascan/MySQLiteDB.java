@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+//Class for Database implemented using Singleton programming pattern
 public class MySQLiteDB extends SQLiteOpenHelper{
 
 	private static final int version = 1;
@@ -65,8 +66,7 @@ public class MySQLiteDB extends SQLiteOpenHelper{
                 db = mysqlite.getWritableDatabase();
             }
       }
-    // be sure to call this method by: DatabaseHelper.getInstance.closeConnecion() when application is closed by some means most likely
-    // onDestroy method of application
+    //call when application is closed by some means most likely
 
      public synchronized void closeConnecion() {
           if(mysqlite!=null){
@@ -103,6 +103,7 @@ public class MySQLiteDB extends SQLiteOpenHelper{
      // return contact list
      //return maplist;
      }
+     //Method for adding a file result to database
 	public void addFile(String name,String dataid, String status){
 		ContentValues values = new ContentValues();
 		values.put(KEY_NAME, name);
@@ -111,6 +112,7 @@ public class MySQLiteDB extends SQLiteOpenHelper{
 		Log.d("main", name);
 		db.insert(TABLE_SCANDATA, null, values);
 	}
+	//Checking the file status
 	public String[] fileStatus(String name){
 
 		Cursor cursor = db.query(TABLE_SCANDATA, COLUMNS, "name = ?", new String[] { String.valueOf(name) } , null, null, null, null);
@@ -123,12 +125,14 @@ public class MySQLiteDB extends SQLiteOpenHelper{
 		}
 		else return null;
 	}
+	//Updating the file status when fileobserver finds modifications
 	public void updateFile(String name, String dataid, String status){
 		ContentValues values = new ContentValues();
 		values.put(KEY_DATAID, dataid);
 		values.put(KEY_STATUS, status);
 		db.update(TABLE_SCANDATA, values, KEY_NAME+" =?", new String[] { String.valueOf(name) });
 	}
+	//Deleting
 	public void deleteFile(String name){
 		db.delete(TABLE_SCANDATA, KEY_NAME+" =?", new String[] { String.valueOf(name) });
 	}

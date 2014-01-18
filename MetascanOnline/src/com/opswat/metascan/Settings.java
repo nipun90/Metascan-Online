@@ -20,7 +20,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
+//Setting containing API key and File Observer
 public class Settings extends Fragment{
 	private static final String TAG = "MainActivity.java";
 	private static final int PICKFILE_RESULT_CODE = 1;

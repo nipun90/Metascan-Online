@@ -5,7 +5,7 @@ import java.io.File;
 import android.content.Context;
 
 //import com.example.test.MainActivity.FolderScan;
-
+//implementing class to scan folders
 public class FolderScan {
 		private Context context;
 		public FolderScan(Context c){

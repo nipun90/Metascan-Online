@@ -20,7 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
+//Displaying the file scanning results
 public class Results extends Fragment{
 	private static final String TAG = "MainActivity.java";
 	private ListView listview;

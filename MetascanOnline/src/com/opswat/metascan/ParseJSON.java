@@ -2,7 +2,7 @@ package com.opswat.metascan;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
+//This class parses json results that we receive from server
 public class ParseJSON {
 int progress_percentage=0;
 int in_queue = 0;
@@ -12,6 +12,7 @@ String start_time;
 String total_time;
 String display_name;
 String dataId;
+
 	public void resultJSON(String result){
 		try {
 			JSONObject resultJson = new JSONObject(result);
@@ -33,7 +34,7 @@ String dataId;
 		}
 
 	}
-	
+	//extracting data id from the response
 	public String getDataID(String response){
 		try {
 			JSONObject responseJSON = new JSONObject(response);
