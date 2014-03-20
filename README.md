@@ -1,5 +1,10 @@
 Metascan-Online
 ===============
+
+####Team Members:
+- Nipun Gupta
+- Tanmay Garg
+
 User Guide
 -----------
 This guide describes the features and usage of the Metascan Onine Android application which scans the files on Android platform using the Metascan Online api. 
